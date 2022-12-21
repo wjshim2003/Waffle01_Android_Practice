@@ -10,3 +10,4 @@
 ![pic](/pull_request.png)
 
 # 프로젝트 설명
+pdf 참조
