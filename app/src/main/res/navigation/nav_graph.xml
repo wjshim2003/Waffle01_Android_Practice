@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.android.android_teamwork.ui.StartFragment"
-        android:label="StartFragment" />
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_page1Fragment"
+            app:destination="@id/page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.example.android.android_teamwork.ui.Page1Fragment"
+        android:label="Page1Fragment" />
 </navigation>
