@@ -2,7 +2,7 @@ package com.example.android.android_teamwork.ui
 
 import androidx.lifecycle.ViewModel
 
-class CoViewModel: ViewModel(){
+class MainViewModel: ViewModel(){
     /*
     ViewModel 을 이용하도록 Fragment를 설계해주세요
     예를들어 ViewModel 을 이용해서 버튼을 누른만큼 그 횟수가 화면에 표시되는 기능이라던지...

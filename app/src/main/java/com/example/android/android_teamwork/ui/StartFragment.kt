@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import com.example.android.android_teamwork.R
 import com.example.android.android_teamwork.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
     private lateinit var binding: FragmentStartBinding
-    private val viewModel: CoViewModel by viewModels()
+    private val viewModel: ViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

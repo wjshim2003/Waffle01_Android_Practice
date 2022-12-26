@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.android_teamwork.databinding.FragmentPage1Binding
-import com.example.android.android_teamwork.databinding.FragmentStartBinding
 
 class Page1Fragment: Fragment() {
     private lateinit var binding: FragmentPage1Binding
-    private val viewModel : CoViewModel by viewModels()
+    private val viewModel : MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
