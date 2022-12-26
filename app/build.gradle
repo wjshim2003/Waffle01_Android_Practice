@@ -36,6 +36,10 @@ android {
     task wrapper(type: Wrapper) {
         gradleVersion = '7.0'
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {

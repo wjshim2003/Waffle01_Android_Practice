@@ -1,8 +1,12 @@
 package com.example.android.android_teamwork.ui
 
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 
-class MainViewModel: ViewModel(){
+class MainViewModel : ViewModel() {
     /*
     ViewModel 을 이용하도록 Fragment를 설계해주세요
     예를들어 ViewModel 을 이용해서 버튼을 누른만큼 그 횟수가 화면에 표시되는 기능이라던지...
@@ -17,5 +21,22 @@ class MainViewModel: ViewModel(){
         rotation += 90
         clicked += 1
         return rotation
+        }
+
+    private val _count = MutableLiveData<Int>(0)
+    val count: LiveData<String> = Transformations.map(_count) {
+        _count.value.toString()
+    }
+
+    fun increaseCount() {
+        _count.value = _count.value?.plus(1)
+    }
+
+    private val _clickCount = MutableLiveData<Int>(0)
+    val clickCount: LiveData<Int> =_clickCount
+
+    fun click() {
+        _clickCount.value = _clickCount.value?.plus(1)
+
     }
 }
