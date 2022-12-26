@@ -1,5 +1,6 @@
 package com.example.android.android_teamwork.ui
 
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -13,6 +14,14 @@ class MainViewModel : ViewModel() {
     앞으로 개발하다보면 하나에 파일에서 여러명이 작업할 때도 있을 것 같은데, 어떤 위험이 있을까
     미리 점검하는 차원에서 이런 제약사항을 넣게 되었습니다.
      */
+    var rotation = 0F
+    var clicked = 0
+
+    fun goRotate(): Float{
+        rotation += 90
+        clicked += 1
+        return rotation
+        }
 
     private val _count = MutableLiveData<Int>(0)
     val count: LiveData<String> = Transformations.map(_count) {
@@ -28,5 +37,6 @@ class MainViewModel : ViewModel() {
 
     fun click() {
         _clickCount.value = _clickCount.value?.plus(1)
+
     }
 }
