@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.android.android_teamwork.R
 import androidx.fragment.app.activityViewModels
 import com.example.android.android_teamwork.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
     private lateinit var binding: FragmentStartBinding
 
-    private val viewModel: Button4ViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,9 +26,16 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.button3.setOnClickListener {
+            goToEastshine()
+        }
         binding.button4.setOnClickListener{viewModel.click()}
         viewModel.clickCount.observe(viewLifecycleOwner) {
             binding.button4.text = it.toString()
         }
+    }
+
+    fun goToEastshine() {
+        findNavController().navigate(R.id.action_startFragment_to_eastshineFragment)
     }
 }

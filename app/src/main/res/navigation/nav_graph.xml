@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/startFragment">
 
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.android.android_teamwork.ui.StartFragment"
-        android:label="StartFragment" />
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_eastshineFragment"
+            app:destination="@id/eastshineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eastshineFragment"
+        android:name="com.example.android.android_teamwork.ui.EastshineFragment"
+        android:label="EastshineFragment" />
 </navigation>
